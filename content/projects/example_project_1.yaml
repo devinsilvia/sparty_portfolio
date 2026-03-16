@@ -1,17 +1,17 @@
 # ============================================================
 # content/projects/example_project_1.yaml
 # ============================================================
-# Example project: Predicting the Best Nap Spots on Campus
-# Copy this file to create your own project entries.
+# Example project: Predicting Momentum Shifts in Spartan Football
 # ============================================================
 
-title: "Optimal Nap Spot Prediction Across Campus"
+title: "Predicting Momentum Shifts in Spartan Football"
 
 short_summary: >
-  Built a model to identify the best nap locations on MSU's campus based
-  on sunlight exposure, foot traffic, grass quality, and proximity to
-  food smells. Findings have been peer-reviewed by three other dogs and
-  were described as "life-changing" and "very good."
+  Built a machine learning model to detect momentum shifts in MSU football
+  games using play-by-play data, win probability swings, and crowd noise
+  levels. The model correctly flagged turning-point drives 83% of the time
+  — helping coaches and the athletics staff understand when the game is
+  truly on the line.
 
 tech_stack:
   - Python
@@ -21,27 +21,32 @@ tech_stack:
   - Jupyter Notebooks
 
 problem_statement: >
-  Finding a good nap spot is harder than it looks. Campus is large,
-  conditions change throughout the day, and the best patches of sun
-  move. A mascot operating on intuition alone wastes valuable resting
-  time — a problem that affects productivity, morale, and tail-wagging
-  rates across the entire campus community.
+  Coaches talk about "momentum" constantly, but it has rarely been
+  defined in a way that can be measured or predicted. The MSU athletics
+  staff wanted a data-driven answer to the question: which in-game events
+  actually shift the balance of a game, and can we identify them in
+  near-real-time? As the mascot, I am professionally obligated to know
+  exactly when to turn up the energy.
 
 approach: >
-  Collected location data across 47 candidate nap sites over a full
-  academic semester. Features included average daily sunlight (hours),
-  grass softness score (1–10, assessed manually), nearby food-cart
-  proximity, and pedestrian traffic by hour. Trained a gradient boosting
-  classifier to predict a site's "nap quality" rating and used SHAP
-  values to explain which features mattered most.
+  Assembled four seasons of MSU play-by-play data (~2,400 drives) and
+  combined it with pre-snap win-probability estimates from a public
+  expected-points model. Defined a "momentum shift" as any sequence of
+  three consecutive plays that moved win probability by more than 15
+  percentage points in a single direction. Trained a gradient boosting
+  classifier on drive-level features — field position, score differential,
+  quarter, time remaining, turnover history — and validated it on a
+  held-out season.
 
 results_impact: >
-  The model achieved 89% accuracy on held-out test sites. Sunlight
-  duration and grass softness were the top two predictive features,
-  while proximity to the student union food court provided a meaningful
-  but secondary boost. A ranked list of top-10 nap sites was distributed
-  to the campus dog community and has since been downloaded 847 times.
+  The model achieved 83% accuracy in flagging momentum-shift drives on
+  the held-out season. Turnovers and explosive plays (gains of 20+ yards)
+  were the strongest predictors, while score differential at the start of
+  a drive had less influence than conventional wisdom suggests. Findings
+  were shared with the offensive coordinator; the model now runs
+  automatically on game film in the film room. I celebrated by doing
+  a push-up for every point scored that season.
 
-repo_url: "https://github.com/zeke-wonder-dog/nap-spot-predictor"
-notebook_url: "https://github.com/zeke-wonder-dog/nap-spot-predictor/blob/main/analysis.ipynb"
-image_path: "img/placeholder_project_1.png"
+repo_url: "https://github.com/sparty-msu/spartan-momentum-model"
+notebook_url: "https://github.com/sparty-msu/spartan-momentum-model/blob/main/momentum_analysis.ipynb"
+image_path: "img/spartan_momentum_project.png"

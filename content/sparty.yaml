@@ -1,0 +1,28 @@
+# ============================================================
+# content/example_student.yaml
+# ============================================================
+# This is an example student profile. Copy this file to
+# something like content/my_profile.yaml, fill in your own
+# information, and update portfolio_config.yaml to point to it.
+# ============================================================
+
+name: "Sparty"
+tagline: "Legendary Spartan Warrior | MSU Mascot | Data Scientist"
+
+about: |
+  I am Sparty — Michigan State University's iconic Spartan warrior mascot —
+  and when I'm not firing up 75,000 fans at Spartan Stadium or charging the
+  court at the Breslin Center, I'm doing what any self-respecting Spartan
+  warrior does in the 21st century: analyzing data.
+
+  My work sits at the intersection of sports analytics and fan experience.
+  I believe the best data science tells a story *any fan can feel* — not
+  just one a statistician can read. If the insight doesn't change how
+  someone approaches the next game, it isn't finished yet.
+
+  Go Green. Go White. Go Data.
+
+# Contact information — remove any fields you prefer not to share
+email: "sparty@msu.edu"
+linkedin: "https://www.linkedin.com/in/sparty-msu"
+github: "https://github.com/sparty-msu"
