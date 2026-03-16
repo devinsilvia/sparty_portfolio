@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sparty | Data Science Portfolio</title>
+
+  <!-- Base styles always loaded -->
+  <link rel="stylesheet" href="css/base.css" />
+
+  <!-- Theme stylesheet — controlled by `theme` in portfolio_config.yaml -->
+  <link rel="stylesheet" href="css/themes/msu-light.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-name">Sparty</div>
+      <div class="header-tagline">Legendary Spartan Warrior | MSU Mascot | Data Scientist</div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Main content (filled in by child templates) ===== -->
+  <main class="site-main">
+    
+
+<!-- ===== About section ===== -->
+<section id="about" class="section about-section">
+  <h2>About Me</h2>
+  <div class="about-text"><p>I am Sparty — Michigan State University's iconic Spartan warrior mascot —
+and when I'm not firing up 75,000 fans at Spartan Stadium or charging the
+court at the Breslin Center, I'm doing what any self-respecting Spartan
+warrior does in the 21st century: analyzing data.</p>
+<p>My work sits at the intersection of sports analytics and fan experience.
+I believe the best data science tells a story <em>any fan can feel</em> — not
+just one a statistician can read. If the insight doesn't change how
+someone approaches the next game, it isn't finished yet.</p>
+<p>Go Green. Go White. Go Data.</p>
+<p><strong>Disclaimer</strong>: This profile is based on the MSU Sparty mascot character and
+is meant for illustrative purposes in a data science portfolio context. It is
+not an official representation of the MSU Sparty mascot or its affiliations.
+It is not intended to be taken as a factual biography of the MSU Sparty
+mascot, but rather as a creative example for students building their own data
+science portfolios.</p></div>
+</section>
+
+<!-- ===== Projects section ===== -->
+<section id="projects" class="section projects-section">
+  <h2>Projects</h2>
+
+  <div class="project-grid">
+    
+    <article class="project-card">
+
+      <!-- Project thumbnail image -->
+      <div class="project-image-wrapper">
+        <img
+          src="img/spartan_momentum_project.png"
+          alt="Thumbnail for Predicting Momentum Shifts in Spartan Football"
+          class="project-image"
+        />
+      </div>
+
+      <div class="project-body">
+        <h3 class="project-title">Predicting Momentum Shifts in Spartan Football</h3>
+
+        <!-- Short summary written for a non-expert audience -->
+        <p class="project-summary">Built a machine learning model to detect momentum shifts in MSU football games using play-by-play data, win probability swings, and crowd noise levels. The model correctly flagged turning-point drives 83% of the time — helping coaches and the athletics staff understand when the game is truly on the line.
+</p>
+
+        <!-- Tech stack as pill badges -->
+        <div class="tech-stack">
+          
+          <span class="tech-badge">Python</span>
+          
+          <span class="tech-badge">scikit-learn</span>
+          
+          <span class="tech-badge">pandas</span>
+          
+          <span class="tech-badge">matplotlib</span>
+          
+          <span class="tech-badge">Jupyter Notebooks</span>
+          
+        </div>
+
+        <!-- Collapsible details (problem / approach / results) -->
+        <details class="project-details">
+          <summary>More details</summary>
+
+          <div class="detail-block">
+            <h4>Problem</h4>
+            <p>Coaches talk about &#34;momentum&#34; constantly, but it has rarely been defined in a way that can be measured or predicted. The MSU athletics staff wanted a data-driven answer to the question: which in-game events actually shift the balance of a game, and can we identify them in near-real-time? As the mascot, I am professionally obligated to know exactly when to turn up the energy.
+</p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Approach</h4>
+            <p>Assembled four seasons of MSU play-by-play data (~2,400 drives) and combined it with pre-snap win-probability estimates from a public expected-points model. Defined a &#34;momentum shift&#34; as any sequence of three consecutive plays that moved win probability by more than 15 percentage points in a single direction. Trained a gradient boosting classifier on drive-level features — field position, score differential, quarter, time remaining, turnover history — and validated it on a held-out season.
+</p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Results &amp; Impact</h4>
+            <p>The model achieved 83% accuracy in flagging momentum-shift drives on the held-out season. Turnovers and explosive plays (gains of 20+ yards) were the strongest predictors, while score differential at the start of a drive had less influence than conventional wisdom suggests. Findings were shared with the offensive coordinator; the model now runs automatically on game film in the film room. I celebrated by doing a push-up for every point scored that season.
+</p>
+          </div>
+        </details>
+
+        <!-- Links to the GitHub repo and notebook -->
+        <div class="project-links">
+          
+          <a href="https://github.com/sparty-msu/spartan-momentum-model" target="_blank" rel="noopener" class="btn btn-repo">
+            View Repo
+          </a>
+          
+          
+          <a href="https://github.com/sparty-msu/spartan-momentum-model/blob/main/momentum_analysis.ipynb" target="_blank" rel="noopener" class="btn btn-notebook">
+            View Notebook
+          </a>
+          
+        </div>
+      </div>
+
+    </article>
+    
+    <article class="project-card">
+
+      <!-- Project thumbnail image -->
+      <div class="project-image-wrapper">
+        <img
+          src="img/placeholder_project_2.png"
+          alt="Thumbnail for Spartan Football Crowd Cheer Analysis"
+          class="project-image"
+        />
+      </div>
+
+      <div class="project-body">
+        <h3 class="project-title">Spartan Football Crowd Cheer Analysis</h3>
+
+        <!-- Short summary written for a non-expert audience -->
+        <p class="project-summary">Analyzed audio and attendance data from Spartan Stadium to understand what game events drive the loudest crowd reactions. Results were used to help the athletics department optimize in-game entertainment and — personally — to determine the exact moments when I should run onto the field for maximum dramatic effect.
+</p>
+
+        <!-- Tech stack as pill badges -->
+        <div class="tech-stack">
+          
+          <span class="tech-badge">Python</span>
+          
+          <span class="tech-badge">pandas</span>
+          
+          <span class="tech-badge">seaborn</span>
+          
+          <span class="tech-badge">Plotly</span>
+          
+          <span class="tech-badge">Jupyter Notebooks</span>
+          
+        </div>
+
+        <!-- Collapsible details (problem / approach / results) -->
+        <details class="project-details">
+          <summary>More details</summary>
+
+          <div class="detail-block">
+            <h4>Problem</h4>
+            <p>Fan energy is contagious, but it is also unpredictable. The athletics department wanted to know which in-game events (touchdowns, turnovers, big defensive stops, walk-up music choices) produced the biggest crowd reactions — and whether the pattern differed by opponent, weather, or game time. As the mascot, I had strong professional interest in this question.
+</p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Approach</h4>
+            <p>Combined play-by-play game data with decibel readings from stadium microphones across three seasons (~36 home games). Engineered features for score differential, down-and-distance, quarter, temperature, and opponent rank. Produced interactive Plotly dashboards that let non-technical staff filter by season and event type to explore crowd response patterns on their own.
+</p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Results &amp; Impact</h4>
+            <p>Defensive turnovers produced the loudest average crowd response — louder even than touchdowns — especially when MSU was trailing. Walk-up music selections in the 3rd quarter showed a statistically significant effect on cheer volume for games decided by fewer than 10 points. The athletics team used these findings to redesign the third-quarter entertainment package for the following season. I was given a commemorative helmet for my contributions.
+</p>
+          </div>
+        </details>
+
+        <!-- Links to the GitHub repo and notebook -->
+        <div class="project-links">
+          
+          <a href="https://github.com/sparty-msu/spartan-cheer-analysis" target="_blank" rel="noopener" class="btn btn-repo">
+            View Repo
+          </a>
+          
+          
+          <a href="https://github.com/sparty-msu/spartan-cheer-analysis/blob/main/cheer_analysis.ipynb" target="_blank" rel="noopener" class="btn btn-notebook">
+            View Notebook
+          </a>
+          
+        </div>
+      </div>
+
+    </article>
+    
+  </div>
+</section>
+
+<!-- ===== Contact section ===== -->
+<section id="contact" class="section contact-section">
+  <h2>Contact</h2>
+  <ul class="contact-list">
+    
+    <li>
+      <span class="contact-label">Email:</span>
+      <a href="mailto:sparty@msu.edu">sparty@msu.edu</a>
+    </li>
+    
+    
+    <li>
+      <span class="contact-label">LinkedIn:</span>
+      <a href="https://www.linkedin.com/in/sparty-msu" target="_blank" rel="noopener">https://www.linkedin.com/in/sparty-msu</a>
+    </li>
+    
+    
+    <li>
+      <span class="contact-label">GitHub:</span>
+      <a href="https://github.com/sparty-msu" target="_blank" rel="noopener">https://github.com/sparty-msu</a>
+    </li>
+    
+  </ul>
+</section>
+
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p>Built with the Data Science Portfolio Template &mdash; powered by Python &amp; Jinja2.</p>
+  </footer>
+
+</body>
+</html>
